@@ -40,7 +40,7 @@ class CandlestickEncoder:
 
         return 'None'
 
-    def cs_visualize(self, x:int = 0, details:bool =False, linewidth:int = 20):
+    def cs_visualize(self, x:int = 0, details:bool =False, linewidth:int = 20) -> None:
         if self.close_price > self.open_price:
             color = 'green'
         elif self.close_price < self.open_price:

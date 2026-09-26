@@ -3,7 +3,7 @@ import yfinance as yf
 import pandas as pd
 import matplotlib.pyplot as plt
 from Enums.CompanyEnum import Company
-from Helpers.CandlestickEncoder import CandlestickEncoder
+from Helpers.CandlestickHelper import CandlestickEncoder
 
 # Global settings
 # for pandas: fullscreen terminal parameters
