@@ -1,0 +1,3 @@
+class CandlestickEncoder:
+
+    def encode():

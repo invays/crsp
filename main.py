@@ -48,3 +48,14 @@ if __name__ == "__main__":
 #
 # print(get_training_test_data())
 
+
+## github
+# import os
+# import sys
+
+# if 'google.colab' in str(get_ipython()):
+#
+#     !git clone https://github.com
+#
+#     os.chdir('ваша_модель')
+#     sys.path.append(os.getcwd())
