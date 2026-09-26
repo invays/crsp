@@ -3,6 +3,7 @@ import yfinance as yf
 import pandas as pd
 import matplotlib.pyplot as plt
 from Enums.CompanyEnum import Company
+from Helpers.CandlestickEncoder import CandlestickEncoder
 
 # Global settings
 # for pandas: fullscreen terminal parameters
@@ -13,6 +14,8 @@ def main():
     company_code = Company.AMAZON.value
     df_train = yf.Ticker(company_code).history(start='2020-1-1', end='2020-1-31')
     print(df_train.head().round(2))
+    print(CandlestickEncoder(10, 4, 6, 1).encoder())
+    print(CandlestickEncoder(10, 3, 7, 1).cs_visualize())
 
 if __name__ == "__main__":
     main()
@@ -20,7 +23,6 @@ if __name__ == "__main__":
 # df = yf.Ticker('AAPL').history()
 
 
-#
 # print(df.head().round(2))
 
 
