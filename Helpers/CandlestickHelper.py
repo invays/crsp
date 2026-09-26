@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+
 class CandlestickEncoder:
 
     def __init__(self, high_price: float|int, open_price: float|int, close_price: float|int, low_price: float|int):
