@@ -1,4 +1,6 @@
 import matplotlib.pyplot as plt
+from pandas import DataFrame
+
 
 class CandlestickEncoder:
 
@@ -7,6 +9,8 @@ class CandlestickEncoder:
         self.open_price = open_price
         self.close_price = close_price
         self.low_price = low_price
+
+
 
     def encoder(self) -> str :
         # decreasing bull
