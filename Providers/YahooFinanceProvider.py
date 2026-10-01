@@ -5,6 +5,8 @@ from pandas import DataFrame
 
 
 class YahooFinanceProvider:
+    # Pandas documentation
+    # https://pandas.pydata.org/docs/reference/general_functions.html
 
     def __init__(self, code: str, start_date:str, end_date:str):
         self.code = code
