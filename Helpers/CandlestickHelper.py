@@ -11,7 +11,6 @@ class CandlestickEncoder:
         self.low_price = low_price
 
 
-
     def encoder(self) -> str :
         # decreasing bull
         if self.high_price > self.open_price > self.close_price > self.low_price:

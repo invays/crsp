@@ -12,7 +12,7 @@ class YahooFinanceProvider:
         self.code = code
         self.start_date = start_date
         self.end_date = end_date
-        self.df_train = None|DataFrame
+        self.df_train = DataFrame
 
     def fetch(self) -> DataFrame:
         data_frame = yf.Ticker(self.code).history(start=self.start_date, end=self.end_date)
@@ -26,14 +26,16 @@ class YahooFinanceProvider:
         #                            for i in range(len(self.df_train) - 1)
         #             ] + [np.nan]
 
-        print(self.df_train)
+        # print(self.df_train)
 
-        return self.df_train.head().round(2)
+        #return self.df_train
+        return self.df_train
 
     def df_filter(self, df: DataFrame) -> DataFrame:
         #df = df.iloc[:,:-3] # remove last 3 columns
-        df.drop(columns=['Stock Splits', 'Volume', 'Dividends'], inplace=True)
+        df.drop(columns=['Stock Splits', 'Dividends'], inplace=True)
         df.reset_index(inplace=True) # reset indexes to numerical values move date to column
         # df['Date'] = [i.date() for i in df.Date]
         df['Date'] = df['Date'].dt.date # only date allows
         return df
+
