@@ -80,10 +80,13 @@ class GetCompanyDataAction:
             if data.change_points.loc[i]:
                 segment_list.append(pattern)
                 j = i
-                while True:
-                    if data.change_types[j + 1][0] != 0:  # first non-equal direction
-                        trend_list.append(data.change_types[j + 1][0])
+                while j < len(data):
+                    direction = data['prev_direction'].iloc[j]
+
+                    if direction != 0:
+                        trend_list.append(direction)
                         break
+
                     j += 1
 
                 pattern = ''
